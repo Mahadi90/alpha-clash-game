@@ -18,60 +18,74 @@
   <body>
     <main class="bg-[#010313] min-h-screen bg-[url('./images/background.png')] bg-no-repeat bg-center">
       <!-- home section start here -->
-      <section class="home hidden">
+      <section id="home" class="home">
        <div class="flex flex-col items-center justify-center h-screen text-white space-y-4">
         <h1 class="text-white font-bold text-5xl md:text-7xl">Alpha Clash</h1>
         <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-        <button class="btn bg-white text-black">Play Now</button>
+        <button onclick="play()" class="btn bg-white text-black">Play Now</button>
        </div>
       </section>
 
-
-      <section class="continue-game flex justify-center flex-col gap-4 items-center h-screen">
-        <div class="artboard artboard-horizontal phone-6 border-8 border-gray-800 rounded-lg bg-[#ffffff5f] text-center flex justify-center items-center">
-          <h2 class="text-7xl font-bold">Y</h2>
-        </div>
-        <div class="my-1 flex w-full justify-center gap-1">
-          <kbd class="kbd">q</kbd>
-          <kbd class="kbd">w</kbd>
-          <kbd class="kbd">e</kbd>
-          <kbd class="kbd">r</kbd>
-          <kbd class="kbd">t</kbd>
-          <kbd class="kbd">y</kbd>
-          <kbd class="kbd">u</kbd>
-          <kbd class="kbd">i</kbd>
-          <kbd class="kbd">o</kbd>
-          <kbd class="kbd">p</kbd>
-        </div>
-        <div class="my-1 flex w-full justify-center gap-1">
-          <kbd class="kbd">a</kbd>
-          <kbd class="kbd">s</kbd>
-          <kbd class="kbd">d</kbd>
-          <kbd class="kbd">f</kbd>
-          <kbd class="kbd">g</kbd>
-          <kbd class="kbd">h</kbd>
-          <kbd class="kbd">j</kbd>
-          <kbd class="kbd">k</kbd>
-          <kbd class="kbd">l</kbd>
-        </div>
-        <div class="my-1 flex w-full justify-center gap-1">
-          <kbd class="kbd">z</kbd>
-          <kbd class="kbd">x</kbd>
-          <kbd class="kbd">c</kbd>
-          <kbd class="kbd">v</kbd>
-          <kbd class="kbd">b</kbd>
-          <kbd class="kbd">n</kbd>
-          <kbd class="kbd">m</kbd>
-          <kbd class="kbd">/</kbd>
-        </div>
-        <div class="flex justify-around w-full">
-          <button class="bg-purple-700 text-white border-none px-8 py-1 rounded-full">Life <span>1</span></button>
-          <button class="bg-purple-700 text-white border-none px-8 py-1 rounded-full">Score <span>1</span></button>
+<!-- continue game section -->
+      <section id="continue-game" class="continue-game h-screen flex justify-center flex-col items-center hidden">
+       
+          <div class="artboard phone-6 artboard-horizontal  border-8 border-gray-800 rounded-lg bg-[#ffffff5f] text-center flex justify-center items-center">
+            <h2 id="currentAlphabet" class="text-7xl uppercase font-bold">Y</h2>
+          </div>
+         <div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="q" class="kbd">q</kbd>
+            <kbd id="w" class="kbd">w</kbd>
+            <kbd id="e" class="kbd">e</kbd>
+            <kbd id="r" class="kbd">r</kbd>
+            <kbd id="t" class="kbd">t</kbd>
+            <kbd id="y" class="kbd">y</kbd>
+            <kbd id="u" class="kbd">u</kbd>
+            <kbd id="i" class="kbd">i</kbd>
+            <kbd id="o" class="kbd">o</kbd>
+            <kbd id="p" class="kbd">p</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="a" class="kbd">a</kbd>
+            <kbd id="s" class="kbd">s</kbd>
+            <kbd id="d" class="kbd">d</kbd>
+            <kbd id="f" class="kbd">f</kbd>
+            <kbd id="g" class="kbd">g</kbd>
+            <kbd id="h" class="kbd">h</kbd>
+            <kbd id="j" class="kbd">j</kbd>
+            <kbd id="k" class="kbd">k</kbd>
+            <kbd id="l" class="kbd">l</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="z" class="kbd">z</kbd>
+            <kbd id="x" class="kbd">x</kbd>
+            <kbd id="c" class="kbd">c</kbd>
+            <kbd id="v" class="kbd">v</kbd>
+            <kbd id="b" class="kbd">b</kbd>
+            <kbd id="n" class="kbd">n</kbd>
+            <kbd id="m" class="kbd">m</kbd>
+            <kbd class="kbd">/</kbd>
+          </div>
+        
+          <div class="flex justify-around w-full">
+            <button class="bg-purple-700 text-white border-none px-8 py-1 rounded-full">Life <span>1</span></button>
+            <button class="bg-purple-700 text-white border-none px-8 py-1 rounded-full">Score <span>1</span></button>
+          </div>
         </div>
       </section>
-      <section class="score">
 
+      <!-- score section -->
+      <section class="score hidden flex flex-col justify-center items-center h-screen">
+       <div class="bg-purple-700 p-8 rounded-xl space-y-4 text-white flex flex-col justify-center items-center">
+        <h2 class="text-5xl font-bold">Score : 14</h2>
+        <button class="btn font-bold bg-white text-black">Play Again</button>
+        <p>Practice will make you pro</p>
+       </div>
       </section>
     </main>
+
+
+    <script src="/sript/script.js"></script>
+    <script src="/utilities/common.js"></script>
   </body>
 </html>
